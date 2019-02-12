@@ -2,26 +2,15 @@
 
 # 项目概述
 
-In this project we will be building a site for a University to keep track of student information and class enrollment. We will be using React Router to navigate between the various views. Take some time to familiarize yourself with the provided components. 
-
 在这个项目中，我们将为一所大学构建一个网站，用于追踪学上信息和班级注册信息。在不同视图（views）之间，我们将使用React Router进行导航，花些时间来熟悉我们已经提供给你的以下组件。
-
-* `App` will be the top level component for our application.
-* `Home` will be the home page displayed when the application first loads. It will also display the available classes.
-* `About` will be the about page displaying information about the University.
-  * `History` will be a nested view with the about page and will display the history of the university.
-  * `Contact` will be a nested view with the about page and will display the University's contact information.
-* `ClassList` will display all the enrolled students for that specific class.
-* `Student` will be the detail view for a particular student.
-
 
 * `App` 将会作为我们应用的最顶层组件。
 * `Home` 将作为应用首次加载时的主页，它也将展示大学的班级信息.
-* `About` will be the about page displaying information about the University.
-  * `History` will be a nested view with the about page and will display the history of the university.
-  * `Contact` will be a nested view with the about page and will display the University's contact information.
-* `ClassList` will display all the enrolled students for that specific class.
-* `Student` will be the detail view for a particular student.
+* `About` 将作为展示大学相关信息的页面。
+  * `History` 将作为about页面的镶嵌视图，用于展示大学的历史信息。
+  * `Contact` 将作为about页面的镶嵌视图，用于展示大学的联系信息。
+* `ClassList` 用于展示所有注册学生的具体课程。
+* `Student` 用于展示受欢迎学生的详细信息。
 * 
 
 # 在线预览
@@ -295,29 +284,31 @@ export default class App extends Component {
 
 <img src="https://github.com/DevMountain/react-4-afternoon/blob/solution/readme-assets/4g.gif" />
 
-## Step 4
+## 步骤 4
 
-### Summary
+### 概括
 
 In this step, we will be adding a new route for our `ClassList` component. We will also be adding `Link` components in the `Home` component to link to the `ClassList` route for each of the listed classes ( Math, English, and Biology ). The `ClassList` component will need to render students for a specific class, in order to do this we'll be using route params.
 
-### Instructions
+在这一步中，我们将为 `ClassList` 组件添加一个新的路由，我们将同样在 `Home` 组件中添加 `Link` 组件，为每个列出的课程（数学、英语、生物）添加路由。`ClassList` 组件将需要为学生渲染一个具体课程，为了实现该功能，我们需要使用route params路由参数。
 
-* Open `src/routes.js`.
-* Import the `ClassList` component to use as a route.
-* Create a `ClassList` route with the following properties:
+### 操作指示
+
+* 打开 `src/routes.js`。
+* 引入`ClassList` 组件，将其作为一个路由。
+* 创建一个 `ClassList` 路由，携带以下特性：
   * Path: `/classlist/:class` - Component: `ClassList`.
-* Open `src/Home/Home.js`.
-* Import `Link` from `react-router-dom`.
-* Wrap each `button` element with a `Link` component.
-* Each link should direct to the path `/classlist` with the class parameter.
+* 打开 `src/Home/Home.js`.
+* 引入 `Link` from `react-router-dom`。
+* 对每个 `button` 元素使用一个 `Link` 组件包裹.
+* 每个链接应该跳转到 `/classlist` ，并且携带以下类参数：
   * Math 1010 - `/classlist/MATH1010`
   * English 2010 - `/classlist/ENG2010`
   * Biology 2020 - `/classlist/BIO2020`
 
 <details>
 
-<summary> Detailed Instructions </summary>
+<summary> 详细说明 </summary>
 
 <br />
 
@@ -345,7 +336,7 @@ render() {
 
 </details>
 
-### Solution
+### 答案
 
 <details>
 
