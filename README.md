@@ -308,7 +308,7 @@ In this step, we will be adding a new route for our `ClassList` component. We wi
 
 <details>
 
-<summary> 详细说明 </summary>
+<summary> 详细说明 </summary>
 
 <br />
 
@@ -390,34 +390,34 @@ export default class Home extends Component {
 
 <img src="https://github.com/DevMountain/react-4-afternoon/blob/solution/readme-assets/5g.gif" />
 
-## Step 5
+## 步骤 5
 
-### Summary
+### 概括
 
-In this step, we will update the `ClassList` component to display the students enrolled for that specific class. To get this data, we will look at what the `class` route parameter equals an make a `HTTP` request to our `json-server`.
+在这一步中，我们将更新 `ClassList` 组件中学生注册的具体课程。为了拿到这些数据，我们将通过向我们的 `json-server` 进行 `HTTP` 请求，查询 `class` 路由参数等于什么。
 
-### Instructions
+### 操作指示
 
-* Open `src/components/ClassList/ClassList.js`.
-* Create a constructor method that initializes state with a property called `students`.
-  * `students` should default to an empty array.
-* Create a `componentDidMount` method that makes a `HTTP` request to the `json-server`:
-  * Install `axios` and `import` it into the component.
-  * The `json-server` API url is `http://localhost:3005/students?class=`.
-    * Class should equal `MATH1010` OR `ENG2010` OR `BIO2020` depending on the route parameter.
-    * Hint: `react-router-dom` passes down a `match` object on a component's `props`.
-  * Use the returned data from the API request to update the `students` array on `state`.
-* Go into the `render` method of the component.
-* `map` over the students and return an `h3` tag of the students `first` and `last` name.
-  * Remember react requires a unique `key` prop on mapped elements.
-  * The properties are called `first_name` and `last_name`.
-* Undearneath the `h2` tag, render the `mapped` over students.
-* Update the `h1` tag to display the page's class name.
-  * Hint: `react-router-dom` passes down a `match` object on a component's `props`.
+* 打开 `src/components/ClassList/ClassList.js`。
+* 创建一个构造函数，初始化一个带有 `students` 属性的状态。
+  * `students` 默认值因该是一个空数组.
+* 创建一个 `componentDidMount` 方法，用于向 `json-server` 进行 `HTTP` 请求：
+  * 安装 `axios` ，并且在组件中 `import` .
+  * `json-server` 的API url是 `http://localhost:3005/students?class=`.
+    * Class 应该等于 `MATH1010` OR `ENG2010` OR `BIO2020` 之一，取决于路由参数是什么。
+    * 提示: `react-router-dom` 向一个组件的 `props` 传递一个 `match` 对象。
+  * 使用向API 请求的返回值数据更新 `state` 中的 `students` 数组。
+* 找到组件中的 `render` 方法。
+* 使用 `map` 遍历 `students` 数组，用 `h3` 标签返回学生的 `first` 和 `last` 姓名。
+  * 记住React在mapped元素中需要一个唯一的 `key` 属性。
+  * 使用 `first_name` 和 `last_name` 作为特性。
+* 在 `h2` 标签下面， 渲染 `mapped` 遍历出的学生。
+* 更新 `h1` 标签，用于展示页面的课程名称。
+  * 提示: `react-router-dom` 向组件的 `props` 传递一个 `match` 对象。
 
 <details>
 
-<summary> Detailed Instructions </summary>
+<summary> 详细说明 </summary>
 
 <br />
 
@@ -497,7 +497,7 @@ Lastly, we just need to update the `h1` element to display the current class. Ju
 
 </details>
 
-### Solution
+### 答案
 
 <details>
 
@@ -546,27 +546,29 @@ export default class ClassList extends Component {
 
 <img src="https://github.com/DevMountain/react-4-afternoon/blob/solution/readme-assets/6g.gif" />
 
-## Step 6
+## 步骤 6
 
-### Summary
+### 概括
 
 In this step, we will start setting up the a student detail view in the `./src/components/Student/Student.js` component. The `Student` component will need to render any given student, in order to this we'll be using route parameters for a student's ID.
 
-### Instructions
+在这一步中，我们将开始在 `./src/components/Student/Student.js` 组件中设置学生的详细视图。`Student` 组件应该能够渲染所给的的任何学生，为了实现该功能，我们将使用路由参数作为一个学生的ID。
 
-* Open `./src/routes.js`.
-* Import the `Student` component to use as a route.
-* Create a `Student` route with the following properties:
-  * Path: `/student/:id` - Component: `Student`.
-* Open `./src/components/ClassList/ClassList.js`.
-* Import `Link` from `react-router-dom`.
-* Wrap the `h3` tag with a `Link` component.
-* Assign the `to` prop for the `Link` component to `/student/:id`, where `id` should equal the student's ID.
-  * Remember to move the unique `key` prop to the outer most element of the map.
+### 操作指示
+
+* 打开 `./src/routes.js`.
+* 引入 `Student` 组件作为一条路由。
+* 创建一个 `Student` 路由具备以下特性：
+  * Path: `/student/:id` - Component: `Student`。
+* 打开 `./src/components/ClassList/ClassList.js`。
+* 从 `react-router-dom` 引入 `Link` 组件。
+* 使用 `Link` 组件包裹 `h3` 标签。
+* 给 `Link` 组件设置 `to` 属性 `/student/:id`, 其中 `id` 应该等于学生的ID。
+  * 记得将唯一的 `key` 属性移动到map渲染的最外层元素上。
 
 <details>
 
-<summary> Detailed Instructions </summary>
+<summary> 详细说明 </summary>
 
 <br />
 
