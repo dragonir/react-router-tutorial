@@ -19,13 +19,13 @@
 
 <img src="https://github.com/DevMountain/react-4-afternoon/blob/solution/readme-assets/1.png" />
 
-## Setup
+## 安装
 
-* `fork` and `clone` this repository.
-* `cd` into the project.
+* `fork` 和 `clone` 这个仓库。
+* 使用 `cd` 命令进入项目目录 。
 * Run `npm install`.
     * One of the packages that was installed is `json-server`.
-    * This library will mimic a REST api and allow you to make HTTP requests for the student data.
+    * This library will mimic 模拟 a REST api and allow you to make HTTP requests for the student data.
       * This data is stored in `./db.json`.
     * Another package that was installed for you is `concurrently`.
     * This library will allow us to run multiple scripts in a single terminal window.
@@ -39,7 +39,7 @@
 
 在这一步，我们将安装配置react router所需要的额外配置，然后我们将创建一个该项目所需要的路由。
 
-### 指示
+### 操作指引
 
 * 安装 React Router (`npm install --save react-router-dom`)。
 * 在`./src`目录下创建一个名为 `routes.js`的文件，并打开它。
@@ -88,7 +88,7 @@ export default (
 
 </details>
 
-### Solution
+### 答案
 
 <details>
 
@@ -114,11 +114,9 @@ export default (
 
 ### 概括
 
-In this step, we will take the routes we just configured in `./src/routes.js` and add it to our application in `./src/index.js`.
+在这一步中，我们将把在`./src/routes.js`中配置的路由添加到我们的应用 `./src/index.js` 中。
 
-在这一步中，我们将把在`./src/routes.js`中配置的路由添加到我们的应用中`./src/index.js`。
-
-### 操作指示
+### 操作指引
 
 * 打开 `./src/index.js`.
 * Import `HashRouter` from `react-router-dom`.
@@ -129,7 +127,7 @@ In this step, we will take the routes we just configured in `./src/routes.js` an
 
 <details>
 
-<summary> Detailed Instructions </summary>
+<summary> 详细说明 </summary>
 
 <br />
 
@@ -165,7 +163,7 @@ render() {
 
 </details>
 
-### Solution
+### 答案
 
 <details>
 
@@ -224,7 +222,7 @@ export default class App extends Component {
 
 在这一步中，我们将添加链接，来渲染我们的home和about视图。
 
-### 操作指示
+### 操作指引
 
 * 打开 `src/App.js`.
 * 从 `react-router-dom` 引入 `Link` .
@@ -292,7 +290,7 @@ In this step, we will be adding a new route for our `ClassList` component. We wi
 
 在这一步中，我们将为 `ClassList` 组件添加一个新的路由，我们将同样在 `Home` 组件中添加 `Link` 组件，为每个列出的课程（数学、英语、生物）添加路由。`ClassList` 组件将需要为学生渲染一个具体课程，为了实现该功能，我们需要使用route params路由参数。
 
-### 操作指示
+### 操作指引
 
 * 打开 `src/routes.js`。
 * 引入`ClassList` 组件，将其作为一个路由。
@@ -386,7 +384,7 @@ export default class Home extends Component {
 
 <br />
 
-<b>Watch how the URL changes when navigating between pages</b>
+<b>当页面间导航变化时观察URL的变化</b>
 
 <img src="https://github.com/DevMountain/react-4-afternoon/blob/solution/readme-assets/5g.gif" />
 
@@ -396,7 +394,7 @@ export default class Home extends Component {
 
 在这一步中，我们将更新 `ClassList` 组件中学生注册的具体课程。为了拿到这些数据，我们将通过向我们的 `json-server` 进行 `HTTP` 请求，查询 `class` 路由参数等于什么。
 
-### 操作指示
+### 操作指引
 
 * 打开 `src/components/ClassList/ClassList.js`。
 * 创建一个构造函数，初始化一个带有 `students` 属性的状态。
@@ -554,7 +552,7 @@ In this step, we will start setting up the a student detail view in the `./src/c
 
 在这一步中，我们将开始在 `./src/components/Student/Student.js` 组件中设置学生的详细视图。`Student` 组件应该能够渲染所给的的任何学生，为了实现该功能，我们将使用路由参数作为一个学生的ID。
 
-### 操作指示
+### 操作指引
 
 * 打开 `./src/routes.js`.
 * 引入 `Student` 组件作为一条路由。
@@ -590,7 +588,7 @@ const students = this.state.students.map((student, i) => (
 
 </details>
 
-### Solution
+### 答案
 
 <details>
 
@@ -664,36 +662,36 @@ export default class ClassList extends Component {
 
 <br />
 
-<b>Watch how the URL changes when navigating between pages</b>
+<b>当页面间导航变化时观察URL的变化</b>
 
 <img src="https://github.com/DevMountain/react-4-afternoon/blob/solution/readme-assets/7g.gif" />
 
-## Step 7
+## 步骤 7
 
-### Summary
+### 概括
 
-In this step, we'll update the `Student` component to display a specific student's information. To get this data, we'll look at the `id` route parameter and use it in combination with an `axios` `HTTP` request to our `json-server`.
+在这一步中，我们将更新 `Student` 组件，以展示一个具体学生的信息，为了得到这个信息，我们将查询路由参数中的 id`，然后用它结合 `axios` 的 `HTTP` 请求从我们的 `json-server` 中获取数据。
 
-### Instructions
+### 操作指引
 
-* Open `src/components/Student/Student.js`.
-* Create a `constructor` method that initializes state with a property called `studentInfo`.
-  * `studentInfo` should default to an empty object.
-* Create a `componentDidMount` method that makes an `HTTP` request to the `json-server`:
-  * Import `axios` into the component.
-  * The `json-server` API url is `http://localhost:3005/students/ID_GOES_HERE`.
-    * `ID_GOES_HERE` should equal the student's id.
-    * Hint: `react-router-dom` passes down a `match` object on a component's `props`.
-  * Use the returned data from the API request to update the `studentInfo` object on `state`.
-* Go into the `render` method of the component.
-* Underneath the `h1` tag, display `studentInfo` properties off of `state`:
-  * `first_name` and `last_name` within an `h1` tag.
-  * The text `Grade:` followed by the `grade` property within an `h3` tag.
-  * The text `Email:` followed by the `email` property within an `h3` tag.
+* 打开 `src/components/Student/Student.js`.
+* 创建一个构造方法 `constructor` ，初始化一个名为 `studentInfo` 的状态。
+  * `studentInfo` 默认值应该是一个空对象。
+* 创建一个`componentDidMount` 方法，用于向 `json-server` 进行 `HTTP` 请求：
+  * 在组件中引入 `axios` 。
+  *  `json-server`  API url 为 `http://localhost:3005/students/ID_GOES_HERE`。
+       * `ID_GOES_HERE` 应该等于学生的 id。
+       * 提示: `react-router-dom` 向组件 `props` 传递一个 `match` 对象。
+  * 使用从API中返回的数据更新状态中的 `studentInfo` 对象。
+* 找到组件中的 `render` 方法。
+* 在 `h1` 标签下面, 展示状态中 `studentInfo` 的特性:
+  * 将`first_name` 和 `last_name` 写在一个 `h1` 标签中。
+  * 文字 `Grade:` 后面紧跟 `grade` 特性，将其写在一个 `h3` 标签中。
+  * 文字 `Email:` 后面紧跟 `email` 特性，将其写在一个 `h3` 标签中。
 
 <details>
 
-<summary> Detailed Instructions </summary>
+<summary> 详细说明 </summary>
 
 <br />
 
@@ -738,7 +736,7 @@ render() {
 
 </details>
 
-### Solution
+### 答案
 
 <details>
 
@@ -784,7 +782,7 @@ export default class Student extends Component {
 
 <img src="https://github.com/DevMountain/react-4-afternoon/blob/solution/readme-assets/8g.gif" />
 
-## Step 8
+## 步骤 8
 
 ### Summary
 
