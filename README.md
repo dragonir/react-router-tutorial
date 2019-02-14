@@ -286,8 +286,6 @@ export default class App extends Component {
 
 ### 概括
 
-In this step, we will be adding a new route for our `ClassList` component. We will also be adding `Link` components in the `Home` component to link to the `ClassList` route for each of the listed classes ( Math, English, and Biology ). The `ClassList` component will need to render students for a specific class, in order to do this we'll be using route params.
-
 在这一步中，我们将为 `ClassList` 组件添加一个新的路由，我们将同样在 `Home` 组件中添加 `Link` 组件，为每个列出的课程（数学、英语、生物）添加路由。`ClassList` 组件将需要为学生渲染一个具体课程，为了实现该功能，我们需要使用route params路由参数。
 
 ### 操作指引
@@ -837,24 +835,24 @@ export default class About extends Component {
 
 ## 步骤 9
 
-### Summary
+### 概括
 
-In this step, we'll create a sub router that routes to the `About`, `History`, and `Contact` components. This step will avoid using `detailed instructions` to provided a little bit of challenge. Use what you've learned from the previous steps to accomplish this one. If you get stuck, you can look at the `solution code`.
+在这一步中，我们将为`About`, `History`, 和 `Contact` 组件创建子路由。在这一步中，我们将避免使用过于详细的提示，给你一些小小的挑战。用你在前面步骤中学到的知识完成它。如果陷入困境，你可以查看答案。
 
-### Instructions
+### 操作指引
 
-* Open `src/components/About/About.js`.
-* Import `Switch` and `Route` from `react-router-dom`.
-* Import the `History` and `Contact` components.
-* Inside the `div` with the className `box`, add a `Switch` component.
-* Add 3 routes inside the `Switch` component:
-  * The first two should route the `History` and `Contact` components.
-    * Hint: the paths for these components are the same values used in the `to` prop on the `Link` components.
-  * The third route should render `JSX` ( instead of a component ) at the <b>exact</b> path of `/about`.
-  * To render JSX instead of a component you can use a `render` prop that equals a function that returns JSX.
+* 打开 `src/components/About/About.js`。
+* 从 `react-router-dom` 中引入 `Switch` 和 `Route`。
+* 引入 `History` 和 `Contact` 组件。
+* 在className为 `box` 的 `div` 标签中 , 添加一个 `Switch` 组件。
+* 在 `Switch` 组件中添加3个路由：
+  * 第一个和第二个路由应该分别指向 `History` 和 `Contact` 组件。
+    * 提示： 对于这些组件的路径应该和 `Link` 组件的 `to` 属性使用相同的值。
+  * 第三个路由应该在路径为 `/about`的<b>exact</b> 渲染 `JSX` ( 而不是一个组件 )  。
+  * 为了渲染JSX而不是一个组件，你可以使用一个相当于一个返回JSX的函数的 `render` 属性。
     * <details>
       
-      <summary> <code> About JSX </code> </summary>
+      <summary> <code> 关于 JSX </code> </summary>
       
       ```html
       <div>
@@ -867,7 +865,7 @@ In this step, we'll create a sub router that routes to the `About`, `History`, a
       
       </details>
 
-### Solution
+### 答案
 
 <details>
 
