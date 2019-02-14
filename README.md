@@ -784,25 +784,27 @@ export default class Student extends Component {
 
 ## 步骤 8
 
-### Summary
+### 概括
 
 In this step, we'll add a sub nav bar that will link to the soon to be nested `About`, `History`, and `Contact` components.
 
-### Instructions
+在这一步中，我们将添加一个导航栏，用于联系 `About`, `History`, 和 `Contact` 组件。
 
-* Open `src/components/About/About.js`.
-* Import `Link` from `react-router-dom`.
-* Inside the `div` with the className `subnav`, add 3 `h3` tags with the text:
+### 操作指引
+
+* 打开 `src/components/About/About.js`。
+* 从 `react-router-dom` 中引入 `Link` 组件。
+* 在含有className `subnav` 的 `div` 中，添加3个 `h3` 标签，标签中写入以下文字：
   * `About`
   * `History`
   * `Contact`
-* Wrap each `h3` tag with a `Link` component that links the following paths:
+* 用包含以下路径的 `Link` 组件包裹 `h3` 标签：
   * About - `/about`
   * History - `/about/history`
   * Contact - `/about/contact`
-* Give each of these `Link` components the className `subnav_links`.
+* 给每个 `Link` 组件设置类名 className 为 `subnav_links`.
 
-### Solution
+### 答案
 
 <details>
 
@@ -833,7 +835,7 @@ export default class About extends Component {
 
 <img src="https://github.com/DevMountain/react-4-afternoon/blob/solution/readme-assets/9.png" />
 
-## Step 9
+## 步骤 9
 
 ### Summary
 
