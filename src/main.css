@@ -81,3 +81,15 @@ a {
   width: 60%;
   margin: 0 auto;
 }
+
+.back_btn{
+  height: 55px;
+  width: 120px;
+  font-size: 14px;
+  color: #FFFFFF;
+  background: #A4A4A4;
+  border: none;
+  outline: none;
+  margin: 20px 0;
+  cursor: pointer;
+}

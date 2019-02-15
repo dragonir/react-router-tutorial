@@ -11,11 +11,10 @@
   * `Contact` 将作为about页面的镶嵌视图，用于展示大学的联系信息。
 * `ClassList` 用于展示所有注册学生的具体课程。
 * `Student` 用于展示受欢迎学生的详细信息。
-* 
 
 # 在线预览
 
-<a href="https://devmountain.github.io/react-4-afternoon/#/">点击我</a>
+<a href="https://devmountain.github.io/react-4-afternoon/#/">点击我查看示例</a>
 
 <img src="https://github.com/DevMountain/react-4-afternoon/blob/solution/readme-assets/1.png" />
 
@@ -23,13 +22,13 @@
 
 * `fork` 和 `clone` 这个仓库。
 * 使用 `cd` 命令进入项目目录 。
-* Run `npm install`.
-    * One of the packages that was installed is `json-server`.
-    * This library will mimic 模拟 a REST api and allow you to make HTTP requests for the student data.
-      * This data is stored in `./db.json`.
-    * Another package that was installed for you is `concurrently`.
-    * This library will allow us to run multiple scripts in a single terminal window.
-* Run `npm start` to spin up the development server <b>AND</b> the `json-server`.
+* 运行 `npm install`。
+    *  `json-server` 是安装的依赖中的其中一个包。
+    * 这个库将模拟一个 REST api，使得你可以使用 HTTP 请求获取学生数据。
+      * 这些数据被储存在 `./db.json`。
+    * 另一个为你安装的库是 `concurrently`。
+    * 这个库允许我们在单个终端窗口中运行多个脚本。
+* 运行 `npm start` 来开启开发服务器 <b>以及</b> `json-server`.
 
 <img src="https://github.com/DevMountain/react-4-afternoon/blob/solution/readme-assets/2.png" />
 
@@ -48,12 +47,12 @@
     * `./src/components/Home/Home.js`
     * `./src/components/About/About.js`
   * 在你的路由中使用以下路径和组件组合:
-    * Path: "/" - Component: `Home` - This path should be exact.
+    * Path: "/" - Component: `Home` - 这个路径应该是 exact.
     * Path: "/about" - Component: `About`.
 
 <details>
 
-<summary> Detailed Instructions </summary>
+<summary> 详细说明 </summary>
 
 <br />
 
@@ -546,8 +545,6 @@ export default class ClassList extends Component {
 
 ### 概括
 
-In this step, we will start setting up the a student detail view in the `./src/components/Student/Student.js` component. The `Student` component will need to render any given student, in order to this we'll be using route parameters for a student's ID.
-
 在这一步中，我们将开始在 `./src/components/Student/Student.js` 组件中设置学生的详细视图。`Student` 组件应该能够渲染所给的的任何学生，为了实现该功能，我们将使用路由参数作为一个学生的ID。
 
 ### 操作指引
@@ -668,7 +665,7 @@ export default class ClassList extends Component {
 
 ### 概括
 
-在这一步中，我们将更新 `Student` 组件，以展示一个具体学生的信息，为了得到这个信息，我们将查询路由参数中的 id`，然后用它结合 `axios` 的 `HTTP` 请求从我们的 `json-server` 中获取数据。
+在这一步中，我们将更新 `Student` 组件，以展示一个具体学生的信息，为了得到这个信息，我们将查询路由参数中的 `id`，然后用它结合 `axios` 的 `HTTP` 请求从我们的 `json-server` 中获取数据。
 
 ### 操作指引
 
@@ -783,8 +780,6 @@ export default class Student extends Component {
 ## 步骤 8
 
 ### 概括
-
-In this step, we'll add a sub nav bar that will link to the soon to be nested `About`, `History`, and `Contact` components.
 
 在这一步中，我们将添加一个导航栏，用于联系 `About`, `History`, 和 `Contact` 组件。
 
@@ -911,15 +906,15 @@ export default class About extends Component {
 
 <img src="https://github.com/DevMountain/react-4-afternoon/blob/solution/readme-assets/10g.gif" />
 
-## Black Diamond
+## 进阶
 
 Try adding a back button on the `Student` detail view that will route back to the `ClassList` view. You can also add a back button to the `ClassList` view that will route back to the `Home` view.
 
-## Contributions
+## 贡献
 
 If you see a problem or a typo, please fork, make the necessary changes, and create a pull request so we can review your changes and merge them into the master repo and branch.
 
-## Copyright
+## 版权
 
 © DevMountain LLC, 2017. Unauthorized use and/or duplication of this material without express and written permission from DevMountain, LLC is strictly prohibited. Excerpts and links may be used, provided that full and clear credit is given to DevMountain with appropriate and specific direction to the original content.
 

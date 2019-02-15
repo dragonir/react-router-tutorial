@@ -18,6 +18,10 @@ export default class Student extends Component {
     });
   }
 
+  back(){
+    window.history.back();
+  }
+
   render() {
     return (
       <div className="box">
@@ -25,6 +29,7 @@ export default class Student extends Component {
         <h1>{ this.state.studentInfo.first_name } { this.state.studentInfo.last_name }</h1>
         <h3>Grade: { this.state.studentInfo.grade }</h3>
         <h3>Email: { this.state.studentInfo.email }</h3>
+        <button className='back_btn'  onClick={this.back}>Back</button>
       </div>
     )
   }
