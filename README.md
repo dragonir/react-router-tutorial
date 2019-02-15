@@ -2,7 +2,7 @@
 
 # 项目概述
 
-在这个项目中，我们将为一所大学构建一个网站，用于追踪学上信息和班级注册信息。在不同视图（views）之间，我们将使用React Router进行导航，花些时间来熟悉我们已经提供给你的以下组件。
+在这个项目中，我们将为一所大学构建一个网站，用于追踪学生信息和班级注册信息。在不同视图（views）之间，我们将使用React Router进行导航，花些时间来熟悉我们已经提供给你的以下组件。
 
 * `App` 将会作为我们应用的最顶层组件。
 * `Home` 将作为应用首次加载时的主页，它也将展示大学的班级信息.
@@ -296,7 +296,7 @@ export default class App extends Component {
 * 打开 `src/Home/Home.js`.
 * 引入 `Link` from `react-router-dom`。
 * 对每个 `button` 元素使用一个 `Link` 组件包裹.
-* 每个链接应该跳转到 `/classlist` ，并且携带以下类参数：
+* 每个链接应该跳转到 `/classlist` ，并且携带以下参数：
   * Math 1010 - `/classlist/MATH1010`
   * English 2010 - `/classlist/ENG2010`
   * Biology 2020 - `/classlist/BIO2020`
