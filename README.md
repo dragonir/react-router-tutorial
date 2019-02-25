@@ -908,11 +908,11 @@ export default class About extends Component {
 
 ## 进阶
 
-Try adding a back button on the `Student` detail view that will route back to the `ClassList` view. You can also add a back button to the `ClassList` view that will route back to the `Home` view.
+尝试在学生详情页 `Student` 添加一个路由返回课程列表页 `ClassList` 的返回按钮。你也可以在课程课程列表页 `ClassList` 添加一个路由返回到首页 `Home` 的按钮。
 
 ## 贡献
 
-If you see a problem or a typo, please fork, make the necessary changes, and create a pull request so we can review your changes and merge them into the master repo and branch.
+如果你发现一个问题或者有文字错误，请fork我们的代码仓库，进行必要的修改并进行提交，我们才能审核你的修改，并将它合并到master repo 和 master分支上。
 
 ## 版权
 
