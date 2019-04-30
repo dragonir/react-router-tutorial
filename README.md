@@ -56,16 +56,16 @@
 
 <br />
 
-Let's begin by installing the `react-router-dom` package. This will allow us to use routing in a react application. We can install it by running `npm install --save react-router-dom` in a terminal. Make sure the terminal is `cd` into the root project directory.
+让我们从安装 `react-router-dom` 开始，它可以允许我们在React应用中使用路由。我们可以在终端中使用指令 `npm install --save react-router-dom` 进行安装。在终端中确认好使用 `cd` 指令进入项目的根目录中。
 
-Now that we have `react-router-dom`, let's create a JavaScript file that will hold all of our routes. In `.src/`, let's make a new file called `routes.js`. At the top of this file we'll need to import `React` from `react` and also import `Switch` and `Route` from `react-router-dom`.
+现在我们有了 `react-router-dom` ，让我们创建一个用来包含所有路由的JavaScript文件。在项目 `.src/` 目录下，我们创建一个名为 `routes.js` 的文件，在该文件的顶部，我们需要从 `react` 导入 `React`，从 `react-router-dom` 导入 `Switch` 和 `Route` 。
 
 ```js
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 ```
 
-We'll also want to import the components that we want the user to be able to route to. In this case, let's import the `Home` and `About` component.
+我们也需要将用户可以通过路由访问的组件导入。在这个例子中，让我们导入 `Home` 和 `About` 组件。
 
 ```js
 import React from 'react';
@@ -74,7 +74,7 @@ import Home from './components/Home/Home';
 import About from './components/About/About';
 ```
 
-Now that we have all of our dependencies in `routes.js`, we can use an `export default` statement to export a router. We'll need an `exact` route at `/` to load the `Home` component and a route at `/about` to load the `About` component.
+现在我们在 `routes.js` 中已经有了所有的依赖，我们可以使用 `export default` 表达式来导出这个路由。我们路径时 `/` 的 `exact` 路由来加载 `Home` 组件，路径是 `/about` 的路由来加载 `About` 组件。
 
 ```js
 export default (
