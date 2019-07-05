@@ -130,7 +130,7 @@ export default (
 
 <br />
 
-Let's begin by opening `./src/index.js` and importing `HashRouter` from `react-router-dom` at the top of the component. We'll need to wrap our react application with this `HashRouter` component in order for routing to work.
+让我们从打开 `./src/index.js` 开始，在该组件顶部从 `react-router-dom` 中导入 `HashRouter`。我们需要用这个 `HashRouter` 组件包裹我们的React应用，以便于路由生效。
 
 ```js
 ReactDOM.render(
@@ -140,7 +140,7 @@ ReactDOM.render(
 , document.getElementById('root'));
 ```
 
-Now that our application is wrapped with `HashRouter`, we can render our router any where in the app. Let's open `./src/App.js` and import `./src/routes.js` at the top of the file. Then, in the `render` method, let's render our routes underneath the `nav` element.
+现在我们的应用被 `HashRouter` 包裹着，我们可以在app的任意地方渲染我们的路由。让我们打开 `./src/App.js` ，并在文件顶部导入 `./src/routes.js` 。然后，在 `render` 方法中，让我们在 `nav` 元素下层渲染我们的路由。
 
 ```js
 render() {
@@ -236,7 +236,7 @@ export default class App extends Component {
 
 <br />
 
-Let's begin by opening `src/App.js` and importing `Link` from `react-router-dom` at the top of the file. The `Link` component will allow us to add clickable links into the DOM so the user can navigate the application. There are two `div` elements with the classname of `links`. Let's replace the `div` to be `Link` with the same classname. The `Link` component uses a `to` prop to determine which route to navigate to. For the home route, we'll want to use `/`, and for the about route, we'll want to use `/about`.
+让我们从打开 `src/App.js` 开始，在该文件顶部从 `react-router-dom` 引入 `Link` 。`Link` 组件允许我们在DOM中添加可点击的链接，以便于用户可以使用应用的导航。有两个类名为 `links` 的 `div` 元素，让我们用有相同类名的 `Link` 元素替换 `div` 元素。`Link` 组件使用一个 `to` 属性来决定导航到哪条路由。对于home路由，我们想使用 `/` 路径，对于about路由，我们想使用 `/about` 路径。
 
 ```js
 <Link to="/" className='links'>Home</Link>
